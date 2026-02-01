@@ -2,48 +2,45 @@ name: Daily Vanguard Scrape
 
 on:
   schedule:
-    # Runs daily at 9 AM EST (2 PM UTC)
-    - cron: '0 14 * * 1-5'  # Monday-Friday only
-  
-  # Allow manual trigger
+    - cron: '0 14 * * 1-5'
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      
+          pip install pandas python-dotenv playwright
+
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install chromium
+
       - name: Run Vanguard scraper
         run: python scripts/scrape_vanguard.py
-      
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
+
           git add data/vanguard_yields.json
-          
-          # Only commit if there are changes
+
           if git diff --cached --quiet; then
             echo "No changes to commit"
-          else
+          else:
             git commit -m "Update: Vanguard yields - $(date +'%Y-%m-%d %H:%M:%S')"
             git push
           fi
-      
-      - name: Notify on failure
-        if: failure()
-        run: echo "⚠️ Scraper failed - check logs"
+
