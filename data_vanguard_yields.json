@@ -1,0 +1,26 @@
+{
+  "VMRXX": {
+    "name": "Vanguard Cash Reserves Federal Money Market Fund",
+    "history": {}
+  },
+  "VMFXX": {
+    "name": "Vanguard Federal Money Market Fund",
+    "history": {}
+  },
+  "VUSXX": {
+    "name": "Vanguard Treasury Money Market Fund",
+    "history": {}
+  },
+  "VMSXX": {
+    "name": "Vanguard Municipal Money Market Fund",
+    "history": {}
+  },
+  "VCTXX": {
+    "name": "Vanguard California Municipal Money Market Fund",
+    "history": {}
+  },
+  "VYFXX": {
+    "name": "Vanguard New York Municipal Money Market Fund",
+    "history": {}
+  }
+}
