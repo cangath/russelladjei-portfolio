@@ -1,26 +1,38 @@
 {
   "VMRXX": {
     "name": "Vanguard Cash Reserves Federal Money Market Fund",
-    "history": {}
+    "history": {
+      "2026-03-22": 3.59
+    }
   },
   "VMFXX": {
     "name": "Vanguard Federal Money Market Fund",
-    "history": {}
+    "history": {
+      "2026-03-22": 3.58
+    }
   },
   "VUSXX": {
     "name": "Vanguard Treasury Money Market Fund",
-    "history": {}
+    "history": {
+      "2026-03-22": 3.63
+    }
   },
   "VMSXX": {
     "name": "Vanguard Municipal Money Market Fund",
-    "history": {}
+    "history": {
+      "2026-03-22": 2.39
+    }
   },
   "VCTXX": {
     "name": "Vanguard California Municipal Money Market Fund",
-    "history": {}
+    "history": {
+      "2026-03-22": 1.97
+    }
   },
   "VYFXX": {
     "name": "Vanguard New York Municipal Money Market Fund",
-    "history": {}
+    "history": {
+      "2026-03-22": 2.36
+    }
   }
 }
