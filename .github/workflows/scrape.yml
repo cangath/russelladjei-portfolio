@@ -39,7 +39,7 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
-          else:
+          else
             git commit -m "Update: Vanguard yields - $(date +'%Y-%m-%d %H:%M:%S')"
             git push
           fi
