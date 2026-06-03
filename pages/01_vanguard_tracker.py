@@ -80,7 +80,7 @@ st.markdown(
 # ============================================================================
 # DATA LOGIC
 # ============================================================================
-DATA_FILE = Path("/Users/russbook/Desktop/RNAdotCOM/testprod/data/vanguard_yields.json")
+DATA_FILE = Path("data/vanguard_yields.json")
 
 
 def load_yields() -> dict:
